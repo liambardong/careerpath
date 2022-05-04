@@ -5,8 +5,8 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 const navigation = [
   { name: 'Career Paths', href: '/careerpaths', current: false },
   { name: 'Submit Path', href: '/submitpaths', current: false},
-  { name: 'About', href: '/contact', current: false },
-  { name: 'Contact', href: '/about', current: false },
+  { name: 'About', href: '/about', current: false },
+  { name: 'Contact', href: '/contact', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -44,7 +44,7 @@ function Navbar(){
                             key={item.name}
                             href={item.href}
                             className={classNames(
-                              item.current ? 'bg-gray-500 text-gray-100' : 'text-gray-300 hover:bg-gray-700 hover:text-gray-100',
+                              item.current ? 'bg-gray-500 text-gray-100' : 'text-gray-300 hover:bg-gray-700 hover:text-med hover:text-gray-100',
                               'px-3 py-2 rounded-md text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
@@ -57,7 +57,7 @@ function Navbar(){
                   </div>
                   <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                     {/* Mobile menu button*/}
-                    <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:text-med  hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
                         <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -88,7 +88,7 @@ function Navbar(){
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-med hover:text-white',
                         'block px-3 py-2 rounded-md text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}
